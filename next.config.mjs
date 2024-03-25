@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    remotePatterns: [{ hostname: "https://via.placeholder.com" }],
+    remotePatterns: [{ hostname: "via.placeholder.com" }],
   },
 };
 

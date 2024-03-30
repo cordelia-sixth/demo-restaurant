@@ -13,8 +13,8 @@ export default async function Page() {
 
   return (
     <>
-      <Gallery />
       <Concept />
+      <Gallery />
       <Menu />
       <Infomation />
     </>

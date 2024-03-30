@@ -4,7 +4,6 @@ import Link from "next/link";
 export const Gallery = () => {
   return (
     <div className="relative">
-      <h1>Gallery</h1>
       <Image
         src="https://via.placeholder.com/500x500?text=galley"
         width={100}

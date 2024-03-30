@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const Concept = () => {
   return (
-    <div className="relative flex h-screen flex-col justify-between bg-slate-200 p-4 text-black">
+    <div className="relative flex h-screen flex-col justify-between bg-slate-200 pt-5 text-black">
       <Image
         src="https://via.placeholder.com/500x500?text=galley"
         width={100}

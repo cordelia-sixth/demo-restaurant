@@ -13,6 +13,19 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      // カスタムアニメーション
+      keyframes: {
+        anim: {
+          "0%": { opacity: "0" },
+          "10%": { opacity: "1" },
+          "25%": { opacity: "1" },
+          "30%": { opacity: "0" },
+          "100%": { opacity: "0" },
+        },
+      },
+      animation: {
+        anim: "anim 25s infinite",
+      },
     },
   },
   plugins: [],

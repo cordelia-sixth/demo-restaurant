@@ -7,12 +7,5 @@ import { Menu } from "../_contents/Menu";
  * メインコンポーネント
  */
 export const Main = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <main className="flex h-full flex-1 flex-col">
-      <Gallery />
-      <Concept />
-      <Menu />
-      <Infomation />
-    </main>
-  );
+  return <main className="flex h-full flex-1 flex-col">{children}</main>;
 };

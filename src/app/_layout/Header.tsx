@@ -1,27 +1,25 @@
-"use client";
-
-import Image from "next/image";
+import { getHeaderimg } from "@/lib/microcms";
+import { HeaderImg } from "./HeaderImg";
+import { HeaderMenu } from "./HeaderMenu";
 
 /**
  * ヘッダーコンポーネント
  */
-export const Header = () => {
+export const Header = async () => {
+  const { contents } = await getHeaderimg();
+
   return (
-    <header className="flex h-screen flex-col bg-slate-300">
-      {/* モバイル用 */}
-      <div className="z-[1] flex justify-between p-4">
-        <h1>SUGOI</h1>
-        <button onClick={() => console.log("hi")}>menu</button>
+    <header className="relative h-screen w-full bg-slate-300">
+      <div className="absolute left-0 top-0 z-[1] flex w-full items-center justify-between p-4">
+        <h1 className="bg-slate-500/[.7] p-2 py-3">SUGOI Restran</h1>
+        <HeaderMenu />
       </div>
-
-      <Image
-        src="https://via.placeholder.com/500x500?text=hero"
-        fill={true}
-        alt="ヘッダー画像"
-      />
-
-      {/* PC用 */}
-      <div className="hidden">PC</div>
+      <div className="relative z-0 h-screen w-full">
+        {/* TODO: もっといいやりかたある？ */}
+        {contents.map((item, index) => {
+          return <HeaderImg key={item.id} id={index} {...item.image} />;
+        })}
+      </div>
     </header>
   );
 };

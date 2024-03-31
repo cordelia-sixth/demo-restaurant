@@ -15,7 +15,7 @@ export const Concept = () => {
       <h1 className="absolute left-10 top-[20%] z-[1] text-5xl">Concept</h1>
 
       <Link
-        href="#"
+        href="/concept"
         className="absolute bottom-40 left-10 right-0 z-[1] flex bg-slate-400 p-5"
       >
         <div className="flex flex-col justify-between gap-8">

@@ -8,11 +8,12 @@ import {
   createClient,
 } from "microcms-js-sdk";
 
-/** ヘッダー画像の型 */
-export type HeaderImg = {
-  /** 画像URL */
+/** ヒーロー画像の型 */
+export type HeroImage = {
+  /** 画像データ */
   image: MicroCMSImage;
-  /** 記事タイトル */
+  /** altテキスト */
+  alt: string;
 } & MicroCMSDate;
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
@@ -29,21 +30,19 @@ export const client = createClient({
 });
 
 /**
- * ヘッダー画像一覧を取得
- * @param queries 検索用クエリ
+ * ヒーロー画像一覧を取得
  */
-export const getHeaderimg = async (
-  queries?: MicroCMSQueries,
-): Promise<MicroCMSListResponse<HeaderImg>> => {
-  const listDate = await client
-    .getList<HeaderImg>({
+export const getHeroImageList = async (): Promise<
+  MicroCMSListResponse<HeroImage>
+> => {
+  const list = await client
+    .getList<HeroImage>({
       endpoint: "hero",
-      queries,
     })
     // TODO: エラーハンドリング
     .catch();
 
-  return listDate;
+  return list;
 };
 
 /**

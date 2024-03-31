@@ -58,6 +58,22 @@ export const getHeroImageList = async (): Promise<
 };
 
 /**
+ * ギャラリー画像一覧を取得
+ */
+export const getGalleryImage = async (): Promise<
+  MicroCMSListResponse<HeroImage>
+> => {
+  const list = await client
+    .getList<HeroImage>({
+      endpoint: "gallery",
+    })
+    // TODO: エラーハンドリング
+    .catch();
+
+  return list;
+};
+
+/**
  * コンセプトページのデータを取得
  */
 export const getConcept = async (): Promise<MicroCMSListResponse<Concept>> => {

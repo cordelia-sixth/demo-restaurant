@@ -23,16 +23,24 @@ export const HeaderMenu = () => {
         <div className="grid h-full content-center justify-center">
           <ul className="mt-[-140px] flex flex-col gap-20 text-4xl">
             <li>
-              <Link href="#">Concept</Link>
+              <Link href="/concept" onClick={handleClose}>
+                Concept
+              </Link>
             </li>
             <li>
-              <Link href="#">Gallery</Link>
+              <Link href="/gallery" onClick={handleClose}>
+                Gallery
+              </Link>
             </li>
             <li>
-              <Link href="#">Menu</Link>
+              <Link href="#" onClick={handleClose}>
+                Menu
+              </Link>
             </li>
             <li>
-              <Link href="#">Infomation</Link>
+              <Link href="#" onClick={handleClose}>
+                Infomation
+              </Link>
             </li>
           </ul>
         </div>

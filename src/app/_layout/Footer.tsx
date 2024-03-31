@@ -6,7 +6,7 @@ import { CiInstagram } from "react-icons/ci";
  */
 export const Footer = () => {
   return (
-    <footer className="flex flex-col items-center gap-8 py-5">
+    <footer className="flex flex-col items-center gap-8 bg-slate-600 py-5 text-white/70">
       <div className="flex items-center gap-2">
         <h1 className="p-2 py-3">SUGOI Restran</h1>
         <Link href="#">

@@ -12,9 +12,21 @@ import {
 export type HeroImage = {
   /** 画像データ */
   image: MicroCMSImage;
-  /** altテキスト */
+  /** 画像のaltテキスト */
   alt: string;
 } & MicroCMSDate;
+
+/** コンセプトデータの型 */
+export type Concept = {
+  /** 画像データ */
+  image: MicroCMSImage;
+  /** 見出し文 */
+  heading: string;
+  /** 詳細文 */
+  description: string;
+  /** 画像のaltテキスト */
+  alt: string;
+};
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
   throw new Error("MICROCMS_SERVICE_DOMAIN is required.");
@@ -43,6 +55,16 @@ export const getHeroImageList = async (): Promise<
     .catch();
 
   return list;
+};
+
+/**
+ * コンセプトページのデータを取得
+ */
+export const getConcept = async (): Promise<MicroCMSListResponse<Concept>> => {
+  const concept = await client
+    .getList<Concept>({ endpoint: "concept" })
+    .catch();
+  return concept;
 };
 
 /**

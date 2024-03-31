@@ -8,9 +8,6 @@ import { Hero } from "./_contents/Hero";
  * トップページ
  */
 const Page = () => {
-  // const data = await getHeaderimg();
-  // console.log(data);
-
   return (
     <>
       <Hero />

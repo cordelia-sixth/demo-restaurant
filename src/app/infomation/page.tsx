@@ -14,8 +14,8 @@ const Page = async () => {
   if (!info) return notFound();
 
   return (
-    <div className="relative min-h-screen bg-orange-50 pb-5">
-      <div className="absolute left-5 top-[12%] z-[1] flex flex-col gap-5">
+    <div className="relative flex min-h-svh bg-orange-50">
+      <div className="absolute left-5 top-[12%] z-[1] flex flex-col gap-5 sm:left-[30%]">
         <h1 className="text-5xl">Infomation</h1>
       </div>
       <Image
@@ -23,7 +23,7 @@ const Page = async () => {
         width={2000}
         height={info.contents[0].image.height}
         style={{
-          minHeight: "100svh",
+          height: "100svh",
           objectFit: "cover",
         }}
         alt={info.contents[0].alt}

@@ -1,7 +1,6 @@
 import { getMenuImage } from "@/lib/microcms";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { useRef } from "react";
 import { Details } from "./_components/Details";
 
 /**

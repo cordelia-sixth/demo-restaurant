@@ -9,12 +9,11 @@ import { notFound } from "next/navigation";
  */
 const Page = async () => {
   const info = await getInfoImage();
-  console.log(info);
 
   if (!info) return notFound();
 
   return (
-    <div className="relative flex min-h-svh bg-orange-50">
+    <div className="relative min-h-svh bg-orange-50 sm:flex">
       <div className="absolute left-5 top-[12%] z-[1] flex flex-col gap-5 sm:left-[30%]">
         <h1 className="text-5xl">Infomation</h1>
       </div>

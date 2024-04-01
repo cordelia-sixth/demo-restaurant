@@ -6,6 +6,7 @@ import Image from "next/image";
  */
 export const ConceptItem = ({ image, heading, description, alt }: Concept) => {
   return (
+    // TODO: スタイル修正とコンポーネント切り出し
     <div className="relative flex h-screen flex-col sm:h-auto sm:flex-row sm:px-96 sm:py-20">
       <Image
         src={image.url + "?w=2000"}

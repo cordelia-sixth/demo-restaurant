@@ -3,13 +3,13 @@ import Image from "next/image";
 
 export const GalleryItem = ({ image, alt }: HeroImage) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex h-[40vh] flex-col sm:h-[70vh]">
       <Image
         src={image.url + "?w=2000"}
         width={2000}
         height={image.height}
         style={{
-          height: "40vh",
+          height: "100%",
           objectFit: "cover",
         }}
         alt={alt}

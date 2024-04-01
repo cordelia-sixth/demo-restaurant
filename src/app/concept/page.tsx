@@ -14,7 +14,7 @@ const Page = async () => {
 
   return (
     <div className="relative">
-      <h1 className="absolute left-5 top-[3%] z-[1] text-5xl text-black">
+      <h1 className="absolute left-5 top-[3%] z-[1] text-5xl text-black sm:left-[30%]">
         Concept
       </h1>
       <Image
@@ -22,7 +22,7 @@ const Page = async () => {
         width={2000}
         height={topImage.contents[0].image.height}
         style={{
-          minHeight: "100svh",
+          height: "100svh",
           objectFit: "cover",
         }}
         alt={topImage.contents[0].alt}

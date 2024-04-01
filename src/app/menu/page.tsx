@@ -14,7 +14,7 @@ const Page = async () => {
 
   return (
     <div className="relative min-h-screen bg-orange-50 pb-5">
-      <div className="absolute left-5 top-[12%] z-[1] flex flex-col gap-5">
+      <div className="absolute left-5 top-[12%] z-[1] flex flex-col gap-5 sm:left-[30%]">
         <h1 className="text-5xl">Menu</h1>
       </div>
       <Image
@@ -27,10 +27,12 @@ const Page = async () => {
         }}
         alt={menu.contents[0].alt}
       />
-      <Details />
-      <small className="block text-center">
-        価格は全て税込です。別途サービス料10%が加算されます。
-      </small>
+      <div className="m-auto sm:max-w-[800px]">
+        <Details />
+        <small className="block text-center">
+          価格は全て税込です。別途サービス料10%が加算されます。
+        </small>
+      </div>
     </div>
   );
 };

@@ -13,9 +13,46 @@ export const HeaderMenu = () => {
 
   return (
     <>
+      <button
+        type="button"
+        onClick={handleOpen}
+        className="fixed right-3 top-3 z-[1] p-2 sm:hidden"
+      >
+        <CiMenuBurger size={30} />
+      </button>
+
+      {/* TODO: 要修正 */}
+      <div className="absolute right-4 top-5 z-[1] max-sm:hidden">
+        <ul className="flex items-center justify-around gap-3 text-sm">
+          <li className="hover:opacity-70">
+            <Link href="/concept" onClick={handleClose}>
+              Concept
+            </Link>
+          </li>
+          <li className="hover:opacity-70">
+            <Link href="/gallery" onClick={handleClose}>
+              Gallery
+            </Link>
+          </li>
+          <li className="hover:opacity-70">
+            <Link href="menu" onClick={handleClose}>
+              Menu
+            </Link>
+          </li>
+          <li className="hover:opacity-70">
+            <Link href="infomation" onClick={handleClose}>
+              Infomation
+            </Link>
+          </li>
+          <li className="cursor-pointer bg-slate-700 px-2 py-1 text-sm text-white">
+            RESERVATION
+          </li>
+        </ul>
+      </div>
+
       <Dialog>
         <div className="flex justify-between p-4">
-          <h1 className="p-1 text-2xl font-bold">SUGOI Restran</h1>
+          <h1 className="text-2xl font-bold">SUGOI Restaurant</h1>
           <button onClick={handleClose} className="self-end p-1">
             <RxCross1 size={35} />
           </button>
@@ -58,13 +95,6 @@ export const HeaderMenu = () => {
           </ul>
         </div>
       </Dialog>
-      <button
-        type="button"
-        onClick={handleOpen}
-        className="fixed right-4 top-3 p-2"
-      >
-        <CiMenuBurger size={30} />
-      </button>
     </>
   );
 };

@@ -6,9 +6,12 @@ import { HeaderMenu } from "./HeaderMenu";
  */
 export const Header = () => {
   return (
-    <header className="relative w-full bg-slate-300">
-      <div className="absolute left-0 top-0 z-[1] flex w-full items-center justify-between p-4">
-        <Link href="/" className="p-1 text-2xl font-bold">
+    <header>
+      <div className="relative m-auto sm:max-w-[800px]">
+        <Link
+          href="/"
+          className="absolute left-4 top-4 z-[1] text-2xl font-bold"
+        >
           SUGOI Restaurant
         </Link>
         <HeaderMenu />

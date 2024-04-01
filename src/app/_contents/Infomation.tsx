@@ -15,7 +15,7 @@ export const Infomation = () => {
       <h1 className="absolute right-10 top-[20%] z-[1] text-5xl">Infomation</h1>
 
       <Link
-        href="#"
+        href="/infomation"
         className="absolute bottom-40 right-10 z-[1] flex bg-slate-400 p-5"
       >
         <div className="flex flex-col justify-between gap-8">

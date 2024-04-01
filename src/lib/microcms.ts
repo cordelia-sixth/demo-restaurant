@@ -91,6 +91,23 @@ export const getMenuImage = async (): Promise<
 };
 
 /**
+ * インフォメーション画像を取得
+ */
+export const getInfoImage = async (): Promise<
+  MicroCMSListResponse<HeroImage>
+> => {
+  const list = await client
+    .getList<HeroImage>({
+      endpoint: "gallery",
+      queries: { q: "infomation" },
+    })
+    // TODO: エラーハンドリング
+    .catch();
+
+  return list;
+};
+
+/**
  * コンセプトページのデータを取得
  */
 export const getConcept = async (): Promise<MicroCMSListResponse<Concept>> => {

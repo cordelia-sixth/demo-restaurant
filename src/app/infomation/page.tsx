@@ -15,7 +15,7 @@ const Page = async () => {
 
   return (
     <div className="relative min-h-screen bg-orange-50 pb-5">
-      <div className="absolute inset-x-8 top-[8%] z-[1] flex flex-col gap-5 text-white/80">
+      <div className="absolute left-5 top-[12%] z-[1] flex flex-col gap-5">
         <h1 className="text-5xl">Infomation</h1>
       </div>
       <Image
@@ -25,13 +25,12 @@ const Page = async () => {
         style={{
           minHeight: "100svh",
           objectFit: "cover",
-          filter: "brightness(70%)",
         }}
         alt={info.contents[0].alt}
       />
 
       <div className="flex flex-col gap-4 p-5">
-        <h2>SUGOI Restrant</h2>
+        <h2>SUGOI Restaurant</h2>
         <div>
           <p>12:00-15:00 (LO. 14:00)</p>
           <p>18:00-23:00 (LO. 22:00)</p>

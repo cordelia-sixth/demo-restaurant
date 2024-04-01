@@ -14,18 +14,16 @@ const Page = async () => {
 
   return (
     <div className="relative min-h-screen bg-orange-50 pb-5">
-      <div className="absolute inset-x-10 top-[15%] z-[1] flex flex-col gap-5 text-white/80">
+      <div className="absolute left-5 top-[12%] z-[1] flex flex-col gap-5">
         <h1 className="text-5xl">Menu</h1>
-        <p className="text-2xl">旬の食材を使ったフルコースをご提供します。</p>
       </div>
       <Image
         src={menu.contents[0].image.url + "?w=2000"}
         width={2000}
         height={menu.contents[0].image.height}
         style={{
-          height: "100vh",
+          height: "100svh",
           objectFit: "cover",
-          filter: "brightness(60%)",
         }}
         alt={menu.contents[0].alt}
       />

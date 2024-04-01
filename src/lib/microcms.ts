@@ -118,6 +118,17 @@ export const getConcept = async (): Promise<MicroCMSListResponse<Concept>> => {
 };
 
 /**
+ * 画像を取得
+ */
+export const getImages = async (
+  endpoint: string,
+  q: string,
+): Promise<MicroCMSListResponse<HeroImage>> => {
+  const images = await client.getList({ endpoint, queries: { q } }).catch();
+  return images;
+};
+
+/**
  * ブログ詳細を取得
  */
 // export const getDetail = async (

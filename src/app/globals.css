@@ -5,3 +5,8 @@
 img {
   vertical-align: top;
 }
+
+details[open] > summary {
+  border-bottom: 1px solid black;
+  opacity: 1;
+}

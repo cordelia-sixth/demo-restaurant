@@ -33,12 +33,12 @@ export const HeaderMenu = () => {
               </Link>
             </li>
             <li>
-              <Link href="#" onClick={handleClose}>
+              <Link href="menu" onClick={handleClose}>
                 Menu
               </Link>
             </li>
             <li>
-              <Link href="#" onClick={handleClose}>
+              <Link href="infomation" onClick={handleClose}>
                 Infomation
               </Link>
             </li>

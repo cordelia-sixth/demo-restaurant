@@ -15,7 +15,7 @@ export const Footer = () => {
       </div>
 
       <table cellPadding={6}>
-        <tbody className="">
+        <tbody>
           <tr>
             <th className="text-left align-top">Address</th>
             <td colSpan={2}>

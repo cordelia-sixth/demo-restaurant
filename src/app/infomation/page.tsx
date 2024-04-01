@@ -13,22 +13,24 @@ const Page = async () => {
   if (!info) return notFound();
 
   return (
-    <div className="relative min-h-svh bg-orange-50 sm:flex">
-      <div className="absolute left-5 top-[12%] z-[1] flex flex-col gap-5 sm:left-[30%]">
-        <h1 className="text-5xl">Infomation</h1>
+    <div className="relative min-h-svh bg-orange-50 sm:grid sm:grid-cols-5">
+      <div className="sm:col-span-4">
+        <div className="absolute left-5 top-[12%] z-[1] flex flex-col gap-5 sm:left-[22.5%]">
+          <h1 className="text-5xl">Infomation</h1>
+        </div>
+        <Image
+          src={info.contents[0].image.url + "?w=2000"}
+          width={2000}
+          height={info.contents[0].image.height}
+          style={{
+            height: "100svh",
+            objectFit: "cover",
+          }}
+          alt={info.contents[0].alt}
+        />
       </div>
-      <Image
-        src={info.contents[0].image.url + "?w=2000"}
-        width={2000}
-        height={info.contents[0].image.height}
-        style={{
-          height: "100svh",
-          objectFit: "cover",
-        }}
-        alt={info.contents[0].alt}
-      />
 
-      <div className="flex flex-col gap-4 p-5">
+      <div className="flex flex-col gap-4 p-5 sm:col-span-1">
         <h2>SUGOI Restaurant</h2>
         <div>
           <p>12:00-15:00 (LO. 14:00)</p>

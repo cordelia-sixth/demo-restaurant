@@ -99,7 +99,7 @@ export const getInfoImage = async (): Promise<
   const list = await client
     .getList<HeroImage>({
       endpoint: "gallery",
-      queries: { q: "infomation" },
+      queries: { q: "infomation", orders: "createdAt" },
     })
     // TODO: エラーハンドリング
     .catch();

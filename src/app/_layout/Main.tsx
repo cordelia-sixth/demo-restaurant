@@ -1,8 +1,3 @@
-import { Concept } from "../_contents/Concept";
-import { Gallery } from "../_contents/Gallery";
-import { Infomation } from "../_contents/Infomation";
-import { Menu } from "../_contents/Menu";
-
 /**
  * メインコンポーネント
  */

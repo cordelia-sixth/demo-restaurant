@@ -4,6 +4,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 /**
+ * TODO: コンポーネントを分離する
+ */
+
+/**
  * インフォメーションページ
  * /infomation
  */

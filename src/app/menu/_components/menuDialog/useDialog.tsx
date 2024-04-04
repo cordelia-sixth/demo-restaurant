@@ -1,4 +1,4 @@
-import { Dialog as Component } from "@/app/_layout/menu/Dialog";
+import { Dialog as Component } from "@/app/menu/_components/menuDialog/Dialog";
 import { ComponentProps, useCallback, useState } from "react";
 
 type Props = Omit<

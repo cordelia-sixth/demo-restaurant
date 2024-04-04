@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useDialog } from "./menu/useDialog";
+import { useDialog } from "../menu/_components/menuDialog/useDialog";
 import { CiMenuBurger } from "react-icons/ci";
 import { RxCross1 } from "react-icons/rx";
 

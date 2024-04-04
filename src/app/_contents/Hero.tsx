@@ -2,7 +2,7 @@ import { getHeroImageList } from "@/lib/microcms";
 import { HeroImage } from "../_layout/HeroImage";
 
 /**
- * ヒーローセクション
+ * トップページのヒーローコンテンツ
  */
 export const Hero = async () => {
   const Imagelist = await getHeroImageList();

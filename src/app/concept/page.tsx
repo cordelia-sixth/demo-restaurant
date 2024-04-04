@@ -4,6 +4,10 @@ import { ConceptItem } from "./_components/ConceptItem";
 import Image from "next/image";
 
 /**
+ * タイトルの動きが変な時があるので要修正
+ */
+
+/**
  * コンセプトページ
  * /concept
  */

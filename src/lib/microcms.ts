@@ -1,12 +1,16 @@
-import { Metadata } from "next";
-import { notFound } from "next/navigation";
+// import { Metadata } from "next";
+// import { notFound } from "next/navigation";
 import {
   MicroCMSDate,
   MicroCMSImage,
   MicroCMSListResponse,
-  MicroCMSQueries,
+  // MicroCMSQueries,
   createClient,
 } from "microcms-js-sdk";
+
+/**
+ * microCMSの画像取り扱いとフェッチ関数の修正
+ */
 
 /** ヒーロー画像の型 */
 export type HeroImage = {

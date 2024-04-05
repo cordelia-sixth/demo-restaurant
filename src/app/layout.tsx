@@ -7,6 +7,7 @@ import { Header } from "./_layout/Header";
 import { Main } from "./_layout/Main";
 import { Footer } from "./_layout/Footer";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/constants/site";
+import { inter, notoSerifJp } from "./fonts";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -41,8 +42,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja">
-      <body>
+    <html lang="ja" className={`${notoSerifJp.variable}`}>
+      <body className="font-notoJp">
         <Container>
           <Header />
           <Main>{children}</Main>

@@ -7,7 +7,7 @@ import { Header } from "./_layout/Header";
 import { Main } from "./_layout/Main";
 import { Footer } from "./_layout/Footer";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/constants/site";
-import { inter, notoSerifJp } from "./fonts";
+import { notoSerifJp } from "./fonts";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
